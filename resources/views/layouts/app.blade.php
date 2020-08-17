@@ -48,6 +48,7 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl1CGgp3/www-widgetapi.js" async=""></script><script src="../assets/js/config.navbar-vertical.js"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link href="../assets/lib/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet">
     <link href="../assets/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
@@ -163,7 +164,7 @@
 {{--<script src="{{ asset('assets/js/jquery.min.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/js/theme.js')}}"></script>--}}
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/app.js') }}"></script>
 <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->

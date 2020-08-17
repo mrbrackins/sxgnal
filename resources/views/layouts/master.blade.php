@@ -163,7 +163,7 @@
 {{--<script src="{{ asset('assets/js/jquery.min.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/js/theme.js')}}"></script>--}}
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/app.js') }}"></script>
 <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->
@@ -183,6 +183,7 @@
 <script src="../assets/lib/plyr/plyr.polyfilled.min.js"></script>
 <script src="../assets/lib/select2/select2.min.js"></script>
 <script src="../assets/js/theme.js"></script>
+{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 @yield('page-script')
 
 </body>

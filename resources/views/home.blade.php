@@ -29,7 +29,10 @@
     </div>
   @endif
   </nav>
+
 @section('content')
+
+
 <div class="row no-gutters" style="margin-left: 10">
     <div class="col-lg-8 pr-lg-2">
       <div class="card mb-3">
@@ -168,5 +171,6 @@
       </div>
     </div>
   </div>
+  <example-component></example-component>
 
 @endsection
