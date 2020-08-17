@@ -69,7 +69,7 @@
 <main class="main" id="top">
 
 
-    <div class="container" data-layout="container">
+    <div class="container" style=" text-align: center;" data-layout="container">
     {{-- @include('layouts/partials/sidebar') --}}
         @yield('content')
         <div class="modal fade" id="authentication-modal" tabindex="-1" role="dialog" aria-labelledby="authentication-modal-label" aria-hidden="true">
