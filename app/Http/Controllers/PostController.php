@@ -1,0 +1,38 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Post;
+use Illuminate\Http\Request;
+
+
+class PostController extends Controller
+{
+    //
+    public function create(Request $request)
+    {
+
+        $images = [
+            1 => ["url" => "http://blahblah.com"],
+            2 => ["url" => "http://blahblah.com"],
+            3 => ["url" => "http://blahblah.com"],
+
+        ];
+
+        $hashtags = [
+            "1" => "#hello",
+            "2" => "#world"
+        ];
+
+        $post = new Post();
+
+        $post->message = $request->message;
+        $post->images = json_encode($images);
+        $post->hashtags = json_encode($hashtags);
+
+        $post->save();
+        return back()
+
+            ->with('success', 'You have successfully upload image.');
+    }
+}
