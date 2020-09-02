@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Post;
 use Illuminate\Http\Request;
 
-class CommentAPIController extends \App\Http\Controllers\Controller
+class PostAPIController extends \App\Http\Controllers\Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,11 @@ class CommentAPIController extends \App\Http\Controllers\Controller
      */
     public function index()
     {
+
         //
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = $posts->load('user');
+        return response()->json($posts);
     }
 
     /**
@@ -34,8 +39,10 @@ class CommentAPIController extends \App\Http\Controllers\Controller
      */
     public function store(Request $request)
     {
-        // 
-        return $request;
+        //
+        $post = Post::create($request->all());
+
+        return response()->json($post);
     }
 
     /**
@@ -81,5 +88,9 @@ class CommentAPIController extends \App\Http\Controllers\Controller
     public function destroy($id)
     {
         //
+
+        Post::destroy($id);
+
+        return response()->json("deleted");
     }
 }

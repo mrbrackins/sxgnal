@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/image/upload', 'ImageUploadController@create')->name('image.upload.post');
 Route::post('/post/create', 'PostController@create')->name('post.create');
+
+

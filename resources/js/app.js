@@ -7,6 +7,7 @@
 require("./bootstrap");
 
 window.Vue = require("vue");
+import store from "./store/index";
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,8 +24,10 @@ Vue.component(
     "example-component",
     require("./components/ExampleComponent.vue").default
 );
+Vue.component("create-post", require("./components/CreatePost.vue").default);
 Vue.component("show-posts", require("./components/ShowPosts.vue").default);
 Vue.component("ShowComments", require("./components/ShowComments.vue").default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -32,5 +35,6 @@ Vue.component("ShowComments", require("./components/ShowComments.vue").default);
  */
 
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    store
 });

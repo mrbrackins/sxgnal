@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,8 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $allusers = User::all();
         $currentUser = Auth::user();
         $posts = Post::all();
-        return view('home')->with(["posts" => $posts, "currentUser" => $currentUser]);
+        return view('home')->with(["posts" => $posts, "currentUser" => $currentUser, "allusers" => $allusers]);
     }
 }
