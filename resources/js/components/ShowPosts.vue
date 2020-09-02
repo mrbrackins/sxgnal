@@ -177,10 +177,12 @@
       </div>
       <a class="fs--1 text-700 d-inline-block mt-2" href="#!">Load more comments (2 of 34)</a>
     </div>-->
+    <ShowComments />
   </div>
 </template>
 
 <script>
+import ShowComments from "./ShowComments";
 export default {
   mounted() {
     console.log("Component mountedbra test.");

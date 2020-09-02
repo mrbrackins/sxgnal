@@ -1,6 +1,6 @@
 @extends ('layouts.master')
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">sXgnal</a>
+  <a class="navbar-brand" href="#">s🙅🏿gnal</a>
   @if (Route::has('login'))
   <div class="top-right links">
       @auth
