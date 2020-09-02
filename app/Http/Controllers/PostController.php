@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     //
     public function create(Request $request)
     {
+
+        $user = Auth::user();
 
         $images = [
             1 => ["url" => "http://blahblah.com"],
@@ -25,7 +27,7 @@ class PostController extends Controller
         ];
 
         $post = new Post();
-
+        $post->user_id = $user->id;
         $post->message = $request->message;
         $post->images = json_encode($images);
         $post->hashtags = json_encode($hashtags);
