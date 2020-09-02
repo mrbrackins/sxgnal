@@ -156,6 +156,9 @@ export default {
         post: this.post,
         token: this.api_token,
       });
+      setTimeout(() => {
+        this.post.message = "";
+      }, 1000);
     },
   },
   computed: {

@@ -14,7 +14,10 @@
               </div>
               <div class="media-body align-self-center ml-2">
                 <p class="mb-1 line-height-1">
-                  <a class="font-weight-semi-bold" href="#">{{post.user.name}}</a>
+                  <a
+                    class="font-weight-semi-bold"
+                    href="#"
+                  >{{ post.user ? post.user.name : user_name }}</a>
                 </p>
                 <p class="mb-0 fs--1">
                   Yesterday • Dalby •
