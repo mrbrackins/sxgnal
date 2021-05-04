@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Comments');
     }
+
+    public function checklist()
+    {
+        return $this->hasMany('App\Checklist');
+    }
 }

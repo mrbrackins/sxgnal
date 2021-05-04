@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\FileUpload;
 
 class PostAPIController extends \App\Http\Controllers\Controller
 {
@@ -40,7 +41,34 @@ class PostAPIController extends \App\Http\Controllers\Controller
     public function store(Request $request)
     {
         //
-        $post = Post::create($request->all());
+
+//        $post = Post::create($request->all());
+        $post = new Post($request->all());
+
+
+
+
+        $image = $request->get('file');
+
+            $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
+            \Image::make($request->get('file'))->save(public_path('images/').$name);
+
+
+
+
+        $post->image = $name;
+
+        $image= new FileUpload();
+        $image->image_name = $name;
+        $post->save();
+        $image->post_id = $post->id;
+        $image->save();
+
+
+        return response()->json(['success' => 'You have successfully uploaded an image', 'data' => $name], 200);
+
+        return "success";
+
 
         return response()->json($post);
     }
@@ -88,6 +116,8 @@ class PostAPIController extends \App\Http\Controllers\Controller
     public function destroy($id)
     {
         //
+        FileUpload::where('post_id',$id)->delete();
+
 
         Post::destroy($id);
 

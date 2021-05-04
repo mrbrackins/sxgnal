@@ -98,6 +98,15 @@
       </div>
       <div class="card-body">
         {{post.message}}
+
+        <div v-if="hasImage(post)">
+          <img class="featurePhoto" :src="'images/' + hasImage(post)" />
+        </div>
+
+
+
+
+
         <!-- <li v-for="image in jsonImages" :key="image.id">{{ image.url }}</li> -->
       </div>
       <!-- <div class="card-footer bg-light pt-0">
@@ -207,12 +216,12 @@
               <span class="ml-1">Comment</span>
             </a>
           </div>
-          <div class="col-auto d-flex align-items-center">
-            <a class="rounded text-700 d-flex align-items-center" href="#!">
-              <img src="assets/img/illustrations/share-inactive.png" width="20" alt />
-              <span class="ml-1">Share</span>
-            </a>
-          </div>
+<!--          <div class="col-auto d-flex align-items-center">-->
+<!--            <a class="rounded text-700 d-flex align-items-center" href="#!">-->
+<!--              <img src="assets/img/illustrations/share-inactive.png" width="20" alt />-->
+<!--              <span class="ml-1">Share</span>-->
+<!--            </a>-->
+<!--          </div>-->
         </div>
         <ShowComments></ShowComments>
 
@@ -231,6 +240,7 @@ export default {
   data() {
     return {
       computedUsername: "Name",
+      uploadedPhoto: "images/1610772814.jpeg",
     };
   },
   mounted() {
@@ -261,9 +271,19 @@ export default {
         return "";
       });
     },
+    hasImage(post){
+     if(post.image){
+       return post.image
+     } else {
+       this.$store.dispatch("fetchPosts", this.api_token);
+
+       return ''}
+
+    },
   },
   computed: {
     ...mapGetters(["posts"]),
+
   },
 
   // computed: {
@@ -276,4 +296,10 @@ export default {
 };
 </script>
  <style scoped>
+   .featurePhoto {
+     width: 60% !important
+   }
+   .white {
+     color: white !important;
+   }
 </style>

@@ -12,11 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
+});
+
+Route::get('/login', function () {
+    return "user cuhh";
 });
 
 Auth::routes();
 
+Route::get('/checklist', 'ChecklistController@index')->name('checklist');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/image/upload', 'ImageUploadController@create')->name('image.upload.post');
 Route::post('/post/create', 'PostController@create')->name('post.create');

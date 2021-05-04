@@ -67,3 +67,10 @@ Route::middleware('auth:api')->post('/posts/store', 'API\PostAPIController@store
 // Delete a post
 // DELETE	/posts/{post}	destroy	posts.destroy
 Route::middleware('auth:api')->delete('/posts/{post}', 'API\PostAPIController@destroy');
+
+
+
+
+// Create an image and save it
+// POST	/posts	store	comments.store
+Route::middleware('auth:api')->post('/image/store', 'API\PostAPIController@store');

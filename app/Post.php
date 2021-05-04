@@ -38,4 +38,9 @@ class Post extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    public function photos()
+    {
+        return $this->hasMany('App\FileUpload');
+    }
 }

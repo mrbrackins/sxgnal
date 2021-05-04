@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\FileUpload;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
@@ -29,6 +30,7 @@ class HomeController extends Controller
         $allusers = User::all();
         $currentUser = Auth::user();
         $posts = Post::all();
-        return view('home')->with(["posts" => $posts, "currentUser" => $currentUser, "allusers" => $allusers]);
+        $photos = FileUpload::all();
+        return view('home')->with(["posts" => $posts, "currentUser" => $currentUser, "allusers" => $allusers, "photos" => $photos,]);
     }
 }

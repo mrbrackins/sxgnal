@@ -12,10 +12,11 @@ class ImageUploadController extends Controller
         $imageName = time() . '.' . request()->image->getClientOriginalExtension();
         return request()->image->move(public_path('images'), $imageName);
 
-        return back()
+        return response()->json([
+            'status' => 'YYou have successfully upload image.',
+            'data' => $imageName,
+        ]);
 
-            ->with('success', 'You have successfully upload image.')
 
-            ->with('image', $imageName);
     }
 }

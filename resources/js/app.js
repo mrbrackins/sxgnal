@@ -24,9 +24,11 @@ Vue.component(
     "example-component",
     require("./components/ExampleComponent.vue").default
 );
+Vue.component("login", require("./components/Login.vue").default);
 Vue.component("create-post", require("./components/CreatePost.vue").default);
 Vue.component("show-posts", require("./components/ShowPosts.vue").default);
 Vue.component("ShowComments", require("./components/ShowComments.vue").default);
+Vue.component("checklist-item", require("./components/ChecklistItem.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

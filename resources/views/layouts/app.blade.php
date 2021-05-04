@@ -34,8 +34,8 @@
 {{--    <script src="{{ asset('assets/js/config.navbar-vertical.js')}}"></script>--}}
 {{--    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">--}}
 {{--    <link href="{{ asset('assets/lib/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet">--}}
-{{--    <link href="{{ asset('assets/lib/datatables-bs4/dataTables.bootstrap4.min.css')}}" rel="stylesheet">--}}
-{{--    <link href="{{ asset('assets/lib/datatables.net-responsive-bs4/responsive.bootstrap4.css')}}" rel="stylesheet">--}}
+    <link href="{{ asset('assets/lib/datatables-bs4/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/datatables.net-responsive-bs4/responsive.bootstrap4.css')}}" rel="stylesheet">
 {{--    <link href="{{ asset('assets/lib/leaflet/leaflet.css')}}" rel="stylesheet">--}}
 {{--    <link href="{{ asset('assets/lib/leaflet.markercluster/MarkerCluster.css')}}" rel="stylesheet">--}}
 {{--    <link href="{{ asset('assets/lib/leaflet.markercluster/MarkerCluster.Default.css')}}" rel="stylesheet">--}}
@@ -149,12 +149,9 @@
 {{--<script src="{{ asset('assets/lib/is_js/is.min.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/lib/lodash/lodash.min.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/lib/perfect-scrollbar/perfect-scrollbar.js') }}"></script>--}}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../assets/lib/chart.js/Chart.min.js"></script>
 
-{{--<script src="{{ asset('assets/lib/chart.js/Chart.min.js') }}"></script>--}}
-{{--<script src="{{ asset('assets/lib/datatables/js/jquery.dataTables.min.js') }}"></script>--}}
-{{--<script src="{{ asset('assets/lib/datatables-bs4/dataTables.bootstrap4.min.js') }}"></script>--}}
-{{--<script src="{{ asset('assets/lib/datatables.net-responsive/dataTables.responsive.js') }}"></script>--}}
-{{--<script src="{{ asset('assets/lib/datatables.net-responsive-bs4/responsive.bootstrap4.js') }}"></script>--}}
 
 {{--<script src="{{ asset('assets/lib/leaflet/leaflet.js') }}"></script>--}}
 {{--<script src="{{ asset('assets/lib/leaflet.markercluster/leaflet.markercluster.js') }}"></script>--}}
@@ -169,7 +166,7 @@
 <!--    JavaScripts-->
 <!-- ===============================================-->
 
-<script src="../assets/js/jquery.min.js"></script>
+
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>--}}
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
@@ -184,6 +181,10 @@
 <script src="../assets/lib/plyr/plyr.polyfilled.min.js"></script>
 <script src="../assets/lib/select2/select2.min.js"></script>
 <script src="../assets/js/theme.js"></script>
+<script src="../assets/lib/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../assets/lib/datatables-bs4/dataTables.bootstrap4.min.js"></script>
+<script src="../assets/lib/datatables.net-responsive/dataTables.responsive.js"></script>
+<script src="../assets/lib/datatables.net-responsive-bs4/responsive.bootstrap4.js"></script>
 @yield('page-script')
 
 </body>
