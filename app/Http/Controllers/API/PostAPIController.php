@@ -48,29 +48,15 @@ class PostAPIController extends \App\Http\Controllers\Controller
 
 
 
-        $image = $request->get('file');
-
-            $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
-            \Image::make($request->get('file'))->save(public_path('images/').$name);
-
-
-
-
-        $post->image = $name;
-
-        $image= new FileUpload();
-        $image->image_name = $name;
+       
         $post->save();
-        $image->post_id = $post->id;
-        $image->save();
+        
 
 
-        return response()->json(['success' => 'You have successfully uploaded an image', 'data' => $name], 200);
-
-        return "success";
+        return response()->json(['success' => 'You have successfully created a post', 'data' => $post], 200);
 
 
-        return response()->json($post);
+
     }
 
     /**

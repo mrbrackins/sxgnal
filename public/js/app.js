@@ -2570,8 +2570,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2610,14 +2608,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
         return "";
       });
-    },
-    hasImage: function hasImage(post) {
-      if (post.image) {
-        return post.image;
-      } else {
-        this.$store.dispatch("fetchPosts", this.api_token);
-        return '';
-      }
     }
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["posts"])) // computed: {
@@ -40284,15 +40274,11 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
-          _vm._v("\n        " + _vm._s(post.message) + "\n\n        "),
-          _vm.hasImage(post)
-            ? _c("div", [
-                _c("img", {
-                  staticClass: "featurePhoto",
-                  attrs: { src: "images/" + _vm.hasImage(post) }
-                })
-              ])
-            : _vm._e()
+          _vm._v(
+            "\n        " +
+              _vm._s(post.message) +
+              "\n\n        \n\n\n\n\n\n        "
+          )
         ]),
         _vm._v(" "),
         _c(

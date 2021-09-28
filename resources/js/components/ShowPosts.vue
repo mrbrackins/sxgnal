@@ -99,9 +99,7 @@
       <div class="card-body">
         {{post.message}}
 
-        <div v-if="hasImage(post)">
-          <img class="featurePhoto" :src="'images/' + hasImage(post)" />
-        </div>
+        
 
 
 
@@ -244,7 +242,7 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch("fetchPosts", this.api_token);
+     this.$store.dispatch("fetchPosts", this.api_token);
     console.log("show posts vue mounted and fetching posts...");
   },
   methods: {
@@ -271,15 +269,7 @@ export default {
         return "";
       });
     },
-    hasImage(post){
-     if(post.image){
-       return post.image
-     } else {
-       this.$store.dispatch("fetchPosts", this.api_token);
 
-       return ''}
-
-    },
   },
   computed: {
     ...mapGetters(["posts"]),
