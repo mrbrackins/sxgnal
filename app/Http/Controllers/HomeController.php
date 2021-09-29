@@ -42,5 +42,13 @@ class HomeController extends Controller
         return view('home/settings')->with(["currentUser" => $currentUser,]);
     }
 
+    public function poa()
+    {
+        
+        $currentUser = Auth::user();
+        
+        return view('poa/poa')->with(["currentUser" => $currentUser,]);
+    }
+
     
 }
