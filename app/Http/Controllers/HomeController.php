@@ -33,4 +33,14 @@ class HomeController extends Controller
         $photos = FileUpload::all();
         return view('home')->with(["posts" => $posts, "currentUser" => $currentUser, "allusers" => $allusers, "photos" => $photos,]);
     }
+
+    public function settings()
+    {
+        
+        $currentUser = Auth::user();
+        
+        return view('home/settings')->with(["currentUser" => $currentUser,]);
+    }
+
+    
 }
