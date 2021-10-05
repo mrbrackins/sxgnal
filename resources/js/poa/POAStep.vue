@@ -1,44 +1,21 @@
 <template>
-    <div class="project">
-        <div class="container">
-            <div class="head">
-                <div class="text">
-                    <h1>project schedule</h1>
-                    <p>project No. op1001</p>
+    <div class="poa-step">
+                <div class="dots">
+                    <span class="dot dot1"></span>
+                   
                 </div>
-                <div class="form">
-                    <div class="date d-flex">
-                        <p>date</p>
-                        <p class="last-p"></p>
+                <div class="vl"></div>
+                <div class="inner-text">
+                    <div class="empty">
+                        <p><span> step 1</span></p>
                     </div>
-                    <div class="sign d-flex">
-                        <p>sign</p>
-                        <p class="last-p"></p>
-                    </div>
-                    <p style="color:red">omi picnics</p>
+                    <br />
+                    
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <POAStep />
-        </div>
-    </div>
-</template>
-<script>
-import POAStep from "../poa/POAStep.vue"
-export default {
-  components: { POAStep },
-    name: "Poa",
-    props: ["api_token", "user_id"],
-    data() {
-        return {};
-    },
-    methods: {},
-    computed: {}
-};
-</script>
+            </template>
 
-<style >
+            <style scoped>
 .project .head {
     display: flex;
     justify-content: space-between;
