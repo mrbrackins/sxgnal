@@ -7,12 +7,15 @@
                     <p>project No. op1001</p>
                 </div>
                 <div class="form">
-                    <label for="fname">date</label>
-                    <input type="text" id="fname" name="fname" />
-                    <br />
-                    <label for="lname">sign</label>
-                    <input type="text" id="lname" name="lname" /> <br />
-                    <p>omi picnics</p>
+                    <div class="date d-flex">
+                        <p>date</p>
+                        <p class="last-p"></p>
+                    </div>
+                    <div class="sign d-flex">
+                        <p>sign</p>
+                        <p class="last-p"></p>
+                    </div>
+                    <p style="color:red">omi picnics</p>
                 </div>
             </div>
         </div>
@@ -27,23 +30,26 @@
                 </div>
                 <div class="vl"></div>
                 <div class="inner-text">
-                    <textarea rows="2" cols="30" name="comment" form="usrform">
- Enter text here... </textarea
-                    >
+                    <div class="empty">
+                        <p><span> step 1</span></p>
+                    </div>
                     <br />
-                    <textarea rows="2" cols="30" name="comment" form="usrform">
- Enter text here... </textarea
-                    ><br />
-                    <textarea rows="2" cols="30" name="comment" form="usrform">
- Enter text here... </textarea
-                    ><br />
-                    <textarea rows="2" cols="30" name="comment" form="usrform">
- Enter text here... </textarea
-                    >
+                    <div class="empty">
+                        <p>step 2</p>
+                    </div>
                     <br />
-                    <textarea rows="2" cols="30" name="comment" form="usrform">
- Enter text here... </textarea
-                    >
+                    <div class="empty">
+                        <p>step 3</p>
+                    </div>
+                    <br />
+                    <div class="empty">
+                        <p>step 4</p>
+                    </div>
+                    <br />
+                    <div class="empty">
+                        <p>step 5</p>
+                    </div>
+                    <br />
                 </div>
             </div>
         </div>
@@ -66,17 +72,40 @@ export default {
     display: flex;
     justify-content: space-between;
 }
+.project {
+    background-color: rgb(31, 27, 27);
+    padding: 30px 0px;
+}
 
 .project h1 {
-    color: lightseagreen;
+    color: blue;
 }
-.project p {
-    color: darkred;
+
+.project .head p {
+    color: white;
+    z-index: 2;
+}
+.project .form p {
+    color: white;
+}
+.last-p {
+    background-color: white;
+    padding: 10px 80px;
+    margin-left: 10px;
+}
+.date,
+.sign {
+    justify-content: space-between;
+    margin-right: 65px;
+}
+.form {
+    justify-content: space-between;
+    padding: 20px;
 }
 .dot {
     height: 25px;
     width: 25px;
-    background-color: rgb(31, 27, 27);
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
     margin-top: 30px;
@@ -85,22 +114,22 @@ export default {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 15.1rem;
+    left: 15.5rem;
 }
 .dot1 {
     margin-top: 15px;
 }
 .dot2 {
-    margin-top: 45px;
+    margin-top: 80px;
 }
 .dot3 {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .dot4 {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .dot5 {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .project {
@@ -110,7 +139,7 @@ export default {
     margin-left: 20rem;
 }
 .inner-text {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     margin-left: 7rem;
     flex-direction: column;
@@ -119,9 +148,19 @@ export default {
 .inner-body {
     margin-left: 10rem;
 }
+.inner-text .empty p {
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-left: 20px;
+    display: flex;
+}
+
 .vl {
-    border-left: 4px solid darkred;
-    height: 350px;
+    border-left: 4px solid rgb(247, 89, 115);
+    height: 480px;
     position: absolute;
     left: 10%;
     top: 0;
@@ -130,8 +169,13 @@ export default {
 
 @media only screen and (max-width: 600px) {
     .project .head .text h1 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: left;
+    }
+
+    .project {
+        width: 400px;
+        padding-bottom: 80px;
     }
 
     .project .head .text p {
@@ -140,34 +184,45 @@ export default {
     .project .head .text p {
         text-align: left;
     }
-
+    .last-p {
+        background-color: white;
+        padding: 10px 60px;
+        margin-left: 10px;
+    }
     .project .head .form {
-        margin-left: 3rem;
-        margin-right: 10rem;
+        margin-left: 4rem;
+        margin-right: 8rem;
         margin-top: -1rem;
+        font-size: 12px;
+    }
+    .inner-text .empty p {
+        background-color: white;
+        padding-top: 5px;
+        padding-bottom: 35px;
+        padding-left: 30px;
+        padding-right: 50px;
+        margin-left: 20px;
+        display: flex;
+    }
+    .form p {
+        text-align: left;
     }
 
-    .project .head input {
-        width: 10rem;
-    }
     .dots {
-        left: 1rem;
+        left: 1.8rem;
     }
 
     .inner-text {
-        margin-left: 3rem;
-        width: 50%;
+        margin-left: 2rem;
+        width: 80%;
     }
 
-    .inner-text input {
-        width: 50px;
-    }
     .vl {
-        margin-left: 0px;
+        margin-left: 20px;
         left: 5%;
     }
     .inner-body {
-        margin-left: 0px;
+        margin-left: 20px;
     }
 }
 </style>

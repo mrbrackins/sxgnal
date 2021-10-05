@@ -2335,6 +2335,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Poa",
   props: ["api_token", "user_id"],
@@ -7136,7 +7142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.project .head[data-v-05454db2] {\r\n    display: flex;\r\n    justify-content: space-between;\n}\n.project h1[data-v-05454db2] {\r\n    color: lightseagreen;\n}\n.project p[data-v-05454db2] {\r\n    color: darkred;\n}\n.dot[data-v-05454db2] {\r\n    height: 25px;\r\n    width: 25px;\r\n    background-color: rgb(31, 27, 27);\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    margin-top: 30px;\n}\n.dots[data-v-05454db2] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    position: absolute;\r\n    left: 15.1rem;\n}\n.dot1[data-v-05454db2] {\r\n    margin-top: 15px;\n}\n.dot2[data-v-05454db2] {\r\n    margin-top: 45px;\n}\n.dot3[data-v-05454db2] {\r\n    margin-top: 50px;\n}\n.dot4[data-v-05454db2] {\r\n    margin-top: 50px;\n}\n.dot5[data-v-05454db2] {\r\n    margin-top: 50px;\n}\n.project[data-v-05454db2] {\r\n    text-transform: capitalize;\n}\n.project .head .form[data-v-05454db2] {\r\n    margin-left: 20rem;\n}\n.inner-text[data-v-05454db2] {\r\n    margin-top: 5rem;\r\n    display: flex;\r\n    margin-left: 7rem;\r\n    flex-direction: column;\r\n    width: 50%;\n}\n.inner-body[data-v-05454db2] {\r\n    margin-left: 10rem;\n}\n.vl[data-v-05454db2] {\r\n    border-left: 4px solid darkred;\r\n    height: 350px;\r\n    position: absolute;\r\n    left: 10%;\r\n    top: 0;\r\n    margin-left: 10rem;\n}\n@media only screen and (max-width: 600px) {\n.project .head .text h1[data-v-05454db2] {\r\n        font-size: 30px;\r\n        text-align: left;\n}\n.project .head .text p[data-v-05454db2] {\r\n        font-size: 12px;\n}\n.project .head .text p[data-v-05454db2] {\r\n        text-align: left;\n}\n.project .head .form[data-v-05454db2] {\r\n        margin-left: 3rem;\r\n        margin-right: 10rem;\r\n        margin-top: -1rem;\n}\n.project .head input[data-v-05454db2] {\r\n        width: 10rem;\n}\n.dots[data-v-05454db2] {\r\n        left: 1rem;\n}\n.inner-text[data-v-05454db2] {\r\n        margin-left: 3rem;\r\n        width: 50%;\n}\n.inner-text input[data-v-05454db2] {\r\n        width: 50px;\n}\n.vl[data-v-05454db2] {\r\n        margin-left: 0px;\r\n        left: 5%;\n}\n.inner-body[data-v-05454db2] {\r\n        margin-left: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.project .head[data-v-05454db2] {\r\n    display: flex;\r\n    justify-content: space-between;\n}\n.project[data-v-05454db2] {\r\n    background-color: rgb(31, 27, 27);\r\n    padding: 30px 0px;\n}\n.project h1[data-v-05454db2] {\r\n    color: blue;\n}\n.project .head p[data-v-05454db2] {\r\n    color: white;\r\n    z-index: 2;\n}\n.project .form p[data-v-05454db2] {\r\n    color: white;\n}\n.last-p[data-v-05454db2] {\r\n    background-color: white;\r\n    padding: 10px 80px;\r\n    margin-left: 10px;\n}\n.date[data-v-05454db2],\r\n.sign[data-v-05454db2] {\r\n    justify-content: space-between;\r\n    margin-right: 65px;\n}\n.form[data-v-05454db2] {\r\n    justify-content: space-between;\r\n    padding: 20px;\n}\n.dot[data-v-05454db2] {\r\n    height: 25px;\r\n    width: 25px;\r\n    background-color: white;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    margin-top: 30px;\n}\n.dots[data-v-05454db2] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    position: absolute;\r\n    left: 15.5rem;\n}\n.dot1[data-v-05454db2] {\r\n    margin-top: 15px;\n}\n.dot2[data-v-05454db2] {\r\n    margin-top: 80px;\n}\n.dot3[data-v-05454db2] {\r\n    margin-top: 80px;\n}\n.dot4[data-v-05454db2] {\r\n    margin-top: 80px;\n}\n.dot5[data-v-05454db2] {\r\n    margin-top: 80px;\n}\n.project[data-v-05454db2] {\r\n    text-transform: capitalize;\n}\n.project .head .form[data-v-05454db2] {\r\n    margin-left: 20rem;\n}\n.inner-text[data-v-05454db2] {\r\n    margin-top: 3rem;\r\n    display: flex;\r\n    margin-left: 7rem;\r\n    flex-direction: column;\r\n    width: 50%;\n}\n.inner-body[data-v-05454db2] {\r\n    margin-left: 10rem;\n}\n.inner-text .empty p[data-v-05454db2] {\r\n    background-color: white;\r\n    padding-top: 5px;\r\n    padding-bottom: 35px;\r\n    padding-left: 30px;\r\n    padding-right: 20px;\r\n    margin-left: 20px;\r\n    display: flex;\n}\n.vl[data-v-05454db2] {\r\n    border-left: 4px solid rgb(247, 89, 115);\r\n    height: 480px;\r\n    position: absolute;\r\n    left: 10%;\r\n    top: 0;\r\n    margin-left: 10rem;\n}\n@media only screen and (max-width: 600px) {\n.project .head .text h1[data-v-05454db2] {\r\n        font-size: 25px;\r\n        text-align: left;\n}\n.project[data-v-05454db2] {\r\n        width: 400px;\r\n        padding-bottom: 80px;\n}\n.project .head .text p[data-v-05454db2] {\r\n        font-size: 12px;\n}\n.project .head .text p[data-v-05454db2] {\r\n        text-align: left;\n}\n.last-p[data-v-05454db2] {\r\n        background-color: white;\r\n        padding: 10px 60px;\r\n        margin-left: 10px;\n}\n.project .head .form[data-v-05454db2] {\r\n        margin-left: 4rem;\r\n        margin-right: 8rem;\r\n        margin-top: -1rem;\r\n        font-size: 12px;\n}\n.inner-text .empty p[data-v-05454db2] {\r\n        background-color: white;\r\n        padding-top: 5px;\r\n        padding-bottom: 35px;\r\n        padding-left: 30px;\r\n        padding-right: 50px;\r\n        margin-left: 20px;\r\n        display: flex;\n}\n.form p[data-v-05454db2] {\r\n        text-align: left;\n}\n.dots[data-v-05454db2] {\r\n        left: 1.8rem;\n}\n.inner-text[data-v-05454db2] {\r\n        margin-left: 2rem;\r\n        width: 80%;\n}\n.vl[data-v-05454db2] {\r\n        margin-left: 20px;\r\n        left: 5%;\n}\n.inner-body[data-v-05454db2] {\r\n        margin-left: 20px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -40223,23 +40229,19 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form" }, [
-            _c("label", { attrs: { for: "fname" } }, [_vm._v("date")]),
+            _c("div", { staticClass: "date d-flex" }, [
+              _c("p", [_vm._v("date")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "last-p" })
+            ]),
             _vm._v(" "),
-            _c("input", {
-              attrs: { type: "text", id: "fname", name: "fname" }
-            }),
+            _c("div", { staticClass: "sign d-flex" }, [
+              _c("p", [_vm._v("sign")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "last-p" })
+            ]),
             _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "lname" } }, [_vm._v("sign")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: { type: "text", id: "lname", name: "lname" }
-            }),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("p", [_vm._v("omi picnics")])
+            _c("p", { staticStyle: { color: "red" } }, [_vm._v("omi picnics")])
           ])
         ])
       ]),
@@ -40261,76 +40263,27 @@ var staticRenderFns = [
           _c("div", { staticClass: "vl" }),
           _vm._v(" "),
           _c("div", { staticClass: "inner-text" }, [
-            _c(
-              "textarea",
-              {
-                attrs: {
-                  rows: "2",
-                  cols: "30",
-                  name: "comment",
-                  form: "usrform"
-                }
-              },
-              [_vm._v("Enter text here... ")]
-            ),
+            _c("div", { staticClass: "empty" }, [
+              _c("p", [_c("span", [_vm._v(" step 1")])])
+            ]),
             _vm._v(" "),
             _c("br"),
             _vm._v(" "),
-            _c(
-              "textarea",
-              {
-                attrs: {
-                  rows: "2",
-                  cols: "30",
-                  name: "comment",
-                  form: "usrform"
-                }
-              },
-              [_vm._v("Enter text here... ")]
-            ),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "textarea",
-              {
-                attrs: {
-                  rows: "2",
-                  cols: "30",
-                  name: "comment",
-                  form: "usrform"
-                }
-              },
-              [_vm._v("Enter text here... ")]
-            ),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "textarea",
-              {
-                attrs: {
-                  rows: "2",
-                  cols: "30",
-                  name: "comment",
-                  form: "usrform"
-                }
-              },
-              [_vm._v("Enter text here... ")]
-            ),
+            _c("div", { staticClass: "empty" }, [_c("p", [_vm._v("step 2")])]),
             _vm._v(" "),
             _c("br"),
             _vm._v(" "),
-            _c(
-              "textarea",
-              {
-                attrs: {
-                  rows: "2",
-                  cols: "30",
-                  name: "comment",
-                  form: "usrform"
-                }
-              },
-              [_vm._v("Enter text here... ")]
-            )
+            _c("div", { staticClass: "empty" }, [_c("p", [_vm._v("step 3")])]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "empty" }, [_c("p", [_vm._v("step 4")])]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "empty" }, [_c("p", [_vm._v("step 5")])]),
+            _vm._v(" "),
+            _c("br")
           ])
         ])
       ])
