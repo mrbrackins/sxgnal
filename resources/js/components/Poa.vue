@@ -3,7 +3,7 @@
         <div class="container">
             <div class="head">
                 <div class="text">
-                    <h1>project schedule</h1>
+                    <h1 class="projectschedule"><strong>project schedule</strong></h1>
                     <p>project No. op1001</p>
                 </div>
                 <div class="form">
@@ -39,6 +39,12 @@ export default {
 </script>
 
 <style >
+ @font-face {
+    font-family: 'Kollektif';
+    src: url('/assets/fonts/Kollektif.ttf');
+}
+
+
 .project .head {
     display: flex;
     justify-content: space-between;
@@ -48,9 +54,7 @@ export default {
     padding: 30px 0px;
 }
 
-.project h1 {
-    color: blue;
-}
+
 
 .project .head p {
     color: white;
@@ -195,5 +199,10 @@ export default {
     .inner-body {
         margin-left: 20px;
     }
+}
+
+.projectschedule {
+   font-family: "Kollektif" !important;
+   color: #07cff2;
 }
 </style>
