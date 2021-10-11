@@ -1,24 +1,31 @@
 <template>
     <div class="poa-step">
-                <div class="dots">
-                    <span class="dot dot1"></span>
-                   
-                </div>
-                <div class="vl"></div>
-                <div class="inner-text">
-                    <div class="empty">
-                        <p><span> step 1</span></p>
-                    </div>
-                    <br />
-                    
-                </div>
+        <div class="dots">
+            <span class="dot dot1"></span>
+        </div>
+        <div class="vl"></div>
+        <div class="inner-text">
+            <div class="empty">
+                <p><span> step 1</span></p>
             </div>
-            </template>
+            <br />
+        </div>
+    </div>
+</template>
 
-            <style scoped>
+<style scoped>
+@font-face {
+    font-family: "kollektif";
+    src: url("/assets\font\kollektif");
+}
 .project .head {
     display: flex;
     justify-content: space-between;
+}
+
+.inner-text .empty p span {
+    color: #ee6664;
+    font-family: "kolletktif" !important;
 }
 .project {
     background-color: rgb(31, 27, 27);
@@ -62,12 +69,12 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 15.5rem;
+    left: 15.2rem;
 }
 .dot1 {
     margin-top: 15px;
 }
-.dot2 {
+/* .dot2 {
     margin-top: 80px;
 }
 .dot3 {
@@ -78,7 +85,7 @@
 }
 .dot5 {
     margin-top: 80px;
-}
+} */
 
 .project {
     text-transform: capitalize;
@@ -89,9 +96,8 @@
 .inner-text {
     margin-top: 3rem;
     display: flex;
-    margin-left: 7rem;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 }
 .poa-step {
     margin-left: 10rem;
@@ -149,7 +155,6 @@
         padding-bottom: 35px;
         padding-left: 30px;
         padding-right: 50px;
-        margin-left: 20px;
         display: flex;
     }
     .form p {

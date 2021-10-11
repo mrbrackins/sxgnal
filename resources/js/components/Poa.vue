@@ -4,7 +4,7 @@
             <div class="head">
                 <div class="text">
                     <h1>project schedule</h1>
-                    <p>project No. op1001</p>
+                    <p>project No. PF1001</p>
                 </div>
                 <div class="form">
                     <div class="date d-flex">
@@ -15,7 +15,7 @@
                         <p>sign</p>
                         <p class="last-p"></p>
                     </div>
-                    <p style="color:red">omi picnics</p>
+                    <p class="omi" style="color:  #ee6664">omi picnics</p>
                 </div>
             </div>
         </div>
@@ -25,11 +25,11 @@
     </div>
 </template>
 <script>
-import POAStep from "../poa/POAStep.vue"
+import POAStep from "../poa/POAStep.vue";
 export default {
-  components: { POAStep },
+    components: { POAStep },
     name: "Poa",
-    props: ["api_token", "user_id"],
+    props: ["api_token", "user_id", "isFinished", "stepNumber", "stepContent"],
     data() {
         return {};
     },
@@ -38,10 +38,29 @@ export default {
 };
 </script>
 
-<style >
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+@font-face {
+    font-family: "kollektif";
+    src: url("/assets\font\kollektif");
+}
+
+@font-face {
+    font-family: "glacial";
+    src: url("/assets\font\glacial");
+}
+
 .project .head {
     display: flex;
     justify-content: space-between;
+}
+
+p {
+    font-family: "glacial" !important;
+}
+.omi {
+    font-family: "Arimo", sans-serif;
 }
 .project {
     background-color: rgb(31, 27, 27);
@@ -49,7 +68,8 @@ export default {
 }
 
 .project h1 {
-    color: blue;
+    color: #07cff2;
+    font-family: "kolletktif" !important;
 }
 
 .project .head p {
@@ -68,6 +88,7 @@ export default {
 .sign {
     justify-content: space-between;
     margin-right: 65px;
+    font-family: "Arimo", sans-serif !important;
 }
 .form {
     justify-content: space-between;
@@ -85,12 +106,12 @@ export default {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 15.5rem;
+    left: 15rem;
 }
 .dot1 {
     margin-top: 15px;
 }
-.dot2 {
+/* .dot2 {
     margin-top: 80px;
 }
 .dot3 {
@@ -101,7 +122,7 @@ export default {
 }
 .dot5 {
     margin-top: 80px;
-}
+} */
 
 .project {
     text-transform: capitalize;
@@ -131,7 +152,7 @@ export default {
 
 .vl {
     border-left: 4px solid rgb(247, 89, 115);
-    height: 100%;
+    height: 70%;
     position: absolute;
     left: 10%;
     top: 0;
