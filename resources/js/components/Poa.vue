@@ -3,8 +3,13 @@
         <div class="container">
             <div class="head">
                 <div class="text">
+<<<<<<< HEAD
                     <h1>project schedule</h1>
                     <p>project No. PF1001</p>
+=======
+                    <h1 class="projectschedule"><strong>project schedule</strong></h1>
+                    <p>project No. op1001</p>
+>>>>>>> 6881afe7ed6a2b2ec0c52e422ce1eba9cd89f6ef
                 </div>
                 <div class="form">
                     <div class="date d-flex">
@@ -38,6 +43,7 @@ export default {
 };
 </script>
 
+<<<<<<< HEAD
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
 
@@ -50,6 +56,14 @@ export default {
     font-family: "glacial";
     src: url("/assets\font\glacial");
 }
+=======
+<style >
+ @font-face {
+    font-family: 'Kollektif';
+    src: url('/assets/fonts/Kollektif.ttf');
+}
+
+>>>>>>> 6881afe7ed6a2b2ec0c52e422ce1eba9cd89f6ef
 
 .project .head {
     display: flex;
@@ -67,10 +81,14 @@ p {
     padding: 30px 0px;
 }
 
+<<<<<<< HEAD
 .project h1 {
     color: #07cff2;
     font-family: "kolletktif" !important;
 }
+=======
+
+>>>>>>> 6881afe7ed6a2b2ec0c52e422ce1eba9cd89f6ef
 
 .project .head p {
     color: white;
@@ -216,5 +234,10 @@ p {
     .inner-body {
         margin-left: 20px;
     }
+}
+
+.projectschedule {
+   font-family: "Kollektif" !important;
+   color: #07cff2;
 }
 </style>
