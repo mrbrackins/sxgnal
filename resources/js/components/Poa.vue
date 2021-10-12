@@ -5,10 +5,6 @@
                 <div class="text">
                     <h1>project schedule</h1>
                     <p>project No. PF1001</p>
-                    <h1 class="projectschedule">
-                        <strong>project schedule</strong>
-                    </h1>
-                    <p>project No. op1001</p>
                 </div>
                 <div class="form">
                     <div class="date d-flex">

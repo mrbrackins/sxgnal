@@ -97,7 +97,6 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 .poa-step {
     margin-left: 10rem;
@@ -156,6 +155,7 @@
         padding-left: 30px;
         padding-right: 50px;
         display: flex;
+        width: 100%;
     }
     .form p {
         text-align: left;
@@ -166,8 +166,8 @@
     }
 
     .inner-text {
-        margin-left: 2rem;
-        width: 80%;
+        margin-left: -6rem;
+        width: 100%;
     }
 
     .vl {
