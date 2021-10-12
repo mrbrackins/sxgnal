@@ -3,8 +3,10 @@
         <div class="container">
             <div class="head">
                 <div class="text">
-                    <h1>project schedule</h1>
-                    <p>project No. PF1001</p>
+
+                    <h1 class="projectschedule"><strong>project schedule</strong></h1>
+                    <p>project No. op1001</p>
+
                 </div>
                 <div class="form">
                     <div class="date d-flex">
@@ -38,7 +40,7 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
 
@@ -51,6 +53,7 @@ export default {
     font-family: "glacial";
     src: url("/assets\font\glacial");
 }
+
 
 .project .head {
     display: flex;
@@ -68,10 +71,7 @@ p {
     padding: 30px 0px;
 }
 
-.project h1 {
-    color: #07cff2;
-    font-family: "kolletktif" !important;
-}
+
 
 .project .head p {
     color: white;
@@ -220,7 +220,9 @@ p {
 }
 
 .projectschedule {
-    font-family: "Kollektif" !important;
-    color: #07cff2;
+
+   font-family: "Kollektif" !important;
+   color: #07cff2;
+
 }
 </style>
