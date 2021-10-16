@@ -37,12 +37,4 @@ class PostController extends Controller
 
             ->with('success', 'You have successfully upload image.');
     }
-
-    Public function poacreate () {
-        $allusers = User::all();
-        $currentUser = Auth::user();
-        $posts = Post::all();
-        $photos = FileUpload::all();
-        return view('poa.poacreate')->with(["posts" => $posts, "currentUser" => $currentUser, "allusers" => $allusers, "photos" => $photos,]);
-    }
 }
