@@ -50,11 +50,11 @@ class HomeController extends Controller
         return view('poa/poa')->with(["currentUser" => $currentUser,]);
     }
 
-    public function CreatePoa(){
+    public function createPoa(){
 
         $currentUser = Auth::user();
         
-        return view('poa/CreatePoa')->with(["currentUser" => $currentUser,]);
+        return view('poa/createPoa')->with(["currentUser" => $currentUser,]);
     }
 
     

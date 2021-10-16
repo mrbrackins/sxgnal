@@ -54971,8 +54971,13 @@ var state = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\laravel\sxgnal\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\laravel\sxgnal\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\wamp64\www\Sxgnal2\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\Sxgnal2\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> f6d9f07c141ba6fa67aa900f40decffd61ae13be
 
 
 /***/ })
