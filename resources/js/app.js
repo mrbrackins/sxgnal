@@ -29,7 +29,8 @@ Vue.component("create-post", require("./components/CreatePost.vue").default);
 Vue.component("show-posts", require("./components/ShowPosts.vue").default);
 Vue.component("ShowComments", require("./components/ShowComments.vue").default);
 Vue.component("checklist-item", require("./components/ChecklistItem.vue").default);
-Vue.component("plan-of-action", require("./components/Poa.vue").default);
+Vue.component("plan-of-action", require("./components/Poa.vue").default); 
+Vue.component("create-plan-of-action", require("./components/CreatePoa.vue").default); 
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

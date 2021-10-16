@@ -38,7 +38,7 @@ export default {
     methods: {},
     computed: {}
 };
-</script>
+</script> 
 
 
 <style>
