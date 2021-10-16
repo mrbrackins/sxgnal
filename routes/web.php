@@ -27,5 +27,6 @@ Route::post('/image/upload', 'ImageUploadController@create')->name('image.upload
 Route::post('/post/create', 'PostController@create')->name('post.create');
 Route::get('/settings', 'HomeController@settings')->name('settings');
 Route::get('/poa', 'HomeController@poa')->name('poa');
+Route::get('/poacreate', '')
 
 
