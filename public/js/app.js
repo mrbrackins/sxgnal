@@ -1983,10 +1983,275 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log("Component mountedbra.");
   }
+});
+$(document).ready(function () {
+  var current_fs, next_fs, previous_fs; //fieldsets
+
+  var opacity;
+  var current = 1;
+  var steps = $("fieldset").length;
+  setProgressBar(current);
+  $(".next").click(function () {
+    current_fs = $(this).parent();
+    next_fs = $(this).parent().next(); //Add Class Active
+
+    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active"); //show the next fieldset
+
+    next_fs.show(); //hide the current fieldset with style
+
+    current_fs.animate({
+      opacity: 0
+    }, {
+      step: function step(now) {
+        // for making fielset appear animation
+        opacity = 1 - now;
+        current_fs.css({
+          display: "none",
+          position: "relative"
+        });
+        next_fs.css({
+          opacity: opacity
+        });
+      },
+      duration: 500
+    });
+    setProgressBar(++current);
+  });
+  $(".previous").click(function () {
+    current_fs = $(this).parent();
+    previous_fs = $(this).parent().prev(); //Remove class active
+
+    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active"); //show the previous fieldset
+
+    previous_fs.show(); //hide the current fieldset with style
+
+    current_fs.animate({
+      opacity: 0
+    }, {
+      step: function step(now) {
+        // for making fielset appear animation
+        opacity = 1 - now;
+        current_fs.css({
+          display: "none",
+          position: "relative"
+        });
+        previous_fs.css({
+          opacity: opacity
+        });
+      },
+      duration: 500
+    });
+    setProgressBar(--current);
+  });
+
+  function setProgressBar(curStep) {
+    var percent = parseFloat(100 / steps) * curStep;
+    percent = percent.toFixed();
+    $(".progress-bar").css("width", percent + "%");
+  }
+
+  $(".submit").click(function () {
+    return false;
+  });
 });
 
 /***/ }),
@@ -7133,6 +7398,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 })));
 //# sourceMappingURL=bootstrap.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n* {\r\n    margin: 0;\r\n    padding: 0;\n}\nhtml {\r\n    height: 100%;\n}\np {\r\n    color: grey;\n}\n#heading {\r\n    text-transform: uppercase;\r\n    color: #673ab7;\r\n    font-weight: normal;\n}\n#msform {\r\n    text-align: center;\r\n    position: relative;\r\n    margin-top: 20px;\n}\n#msform fieldset {\r\n    background: white;\r\n    border: 0 none;\r\n    border-radius: 0.5rem;\r\n    box-sizing: border-box;\r\n    width: 100%;\r\n    margin: 0;\r\n    padding-bottom: 20px;\r\n    position: relative;\n}\n.form-card {\r\n    text-align: left;\n}\n#msform fieldset:not(:first-of-type) {\r\n    display: none;\n}\n#msform input,\r\n#msform textarea {\r\n    padding: 8px 15px 8px 15px;\r\n    border: 1px solid #ccc;\r\n    border-radius: 0px;\r\n    margin-bottom: 25px;\r\n    margin-top: 2px;\r\n    width: 100%;\r\n    box-sizing: border-box;\r\n    font-family: montserrat;\r\n    color: #2c3e50;\r\n    background-color: #eceff1;\r\n    font-size: 16px;\r\n    letter-spacing: 1px;\n}\n#msform input:focus,\r\n#msform textarea:focus {\r\n    box-shadow: none !important;\r\n    border: 1px solid #673ab7;\r\n    outline-width: 0;\n}\n#msform .action-button {\r\n    width: 100px;\r\n    background: #673ab7;\r\n    font-weight: bold;\r\n    color: white;\r\n    border: 0 none;\r\n    border-radius: 0px;\r\n    cursor: pointer;\r\n    padding: 10px 5px;\r\n    margin: 10px 0px 10px 5px;\r\n    float: right;\n}\n#msform .action-button:hover,\r\n#msform .action-button:focus {\r\n    background-color: #311b92;\n}\n#msform .action-button-previous {\r\n    width: 100px;\r\n    background: #616161;\r\n    font-weight: bold;\r\n    color: white;\r\n    border: 0 none;\r\n    border-radius: 0px;\r\n    cursor: pointer;\r\n    padding: 10px 5px;\r\n    margin: 10px 5px 10px 0px;\r\n    float: right;\n}\n#msform .action-button-previous:hover,\r\n#msform .action-button-previous:focus {\r\n    background-color: #000000;\n}\n.card {\r\n    z-index: 0;\r\n    border: none;\r\n    position: relative;\n}\n.fs-title {\r\n    font-size: 25px;\r\n    color: #673ab7;\r\n    margin-bottom: 15px;\r\n    font-weight: normal;\r\n    text-align: left;\n}\n.purple-text {\r\n    color: #673ab7;\r\n    font-weight: normal;\n}\n.steps {\r\n    font-size: 25px;\r\n    color: gray;\r\n    margin-bottom: 10px;\r\n    font-weight: normal;\r\n    text-align: right;\n}\n.fieldlabels {\r\n    color: gray;\r\n    text-align: left;\n}\n#progressbar {\r\n    margin-bottom: 30px;\r\n    overflow: hidden;\r\n    color: lightgrey;\n}\n#progressbar .active {\r\n    color: #673ab7;\n}\n#progressbar li {\r\n    list-style-type: none;\r\n    font-size: 15px;\r\n    width: 25%;\r\n    float: left;\r\n    position: relative;\r\n    font-weight: 400;\n}\n#progressbar #account:before {\r\n    font-family: FontAwesome;\r\n    content: \"\\F13E\";\n}\n#progressbar #personal:before {\r\n    font-family: FontAwesome;\r\n    content: \"\\F007\";\n}\n#progressbar #payment:before {\r\n    font-family: FontAwesome;\r\n    content: \"\\F030\";\n}\n#progressbar #confirm:before {\r\n    font-family: FontAwesome;\r\n    content: \"\\F00C\";\n}\n#progressbar li:before {\r\n    width: 50px;\r\n    height: 50px;\r\n    line-height: 45px;\r\n    display: block;\r\n    font-size: 20px;\r\n    color: #ffffff;\r\n    background: lightgray;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px auto;\r\n    padding: 2px;\n}\n#progressbar li:after {\r\n    content: \"\";\r\n    width: 100%;\r\n    height: 2px;\r\n    background: lightgray;\r\n    position: absolute;\r\n    left: 0;\r\n    top: 25px;\r\n    z-index: -1;\n}\n#progressbar li.active:before,\r\n#progressbar li.active:after {\r\n    background: #673ab7;\n}\n.progress {\r\n    height: 20px;\n}\n.progress-bar {\r\n    background-color: #673ab7;\n}\n.fit-image {\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\n}\r\n", ""]);
+
+// exports
 
 
 /***/ }),
@@ -39112,6 +39396,36 @@ try {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./CreatePoa.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Poa.vue?vue&type=style&index=0&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Poa.vue?vue&type=style&index=0&lang=css& ***!
@@ -39947,19 +40261,312 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
+    return _c("div", { staticClass: "container-fluid" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("I'm an example component.")
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-12 col-sm-9 col-md-12 col-lg-12 col-xl-5 text-center p-0 mt-3 mb-2"
+          },
+          [
+            _c("div", { staticClass: "card px-5 pt-4 pb-0 mt-3 mb-3" }, [
+              _c("h2", { attrs: { id: "heading" } }, [
+                _vm._v("Sign Up Your User Account")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Fill all form field to go to next step")]),
+              _vm._v(" "),
+              _c("form", { attrs: { id: "msform" } }, [
+                _c("ul", { attrs: { id: "progressbar" } }, [
+                  _c(
+                    "li",
+                    { staticClass: "active", attrs: { id: "account" } },
+                    [_c("strong", [_vm._v("Account")])]
+                  ),
+                  _vm._v(" "),
+                  _c("li", { attrs: { id: "personal" } }, [
+                    _c("strong", [_vm._v("Personal")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { attrs: { id: "payment" } }, [
+                    _c("strong", [_vm._v("Image")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { attrs: { id: "confirm" } }, [
+                    _c("strong", [_vm._v("Finish")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "progress" }, [
+                  _c("div", {
+                    staticClass:
+                      "progress-bar progress-bar-striped progress-bar-animated",
+                    attrs: {
+                      role: "progressbar",
+                      "aria-valuemin": "0",
+                      "aria-valuemax": "100"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("fieldset", [
+                  _c("div", { staticClass: "form-card" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-7" }, [
+                        _c("h2", { staticClass: "fs-title" }, [
+                          _vm._v(
+                            "\n                                        Account Information:\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-5" }, [
+                        _c("h2", { staticClass: "steps" }, [
+                          _vm._v("Step 1 - 4")
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Email: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "email",
+                        name: "email",
+                        placeholder: "Email Id"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Username: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        name: "uname",
+                        placeholder: "UserName"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Password: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "password",
+                        name: "pwd",
+                        placeholder: "Password"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Confirm Password: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "password",
+                        name: "cpwd",
+                        placeholder: "Confirm Password"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "next action-button",
+                    attrs: { type: "button", name: "next", value: "Next" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("fieldset", [
+                  _c("div", { staticClass: "form-card" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-7" }, [
+                        _c("h2", { staticClass: "fs-title" }, [
+                          _vm._v(
+                            "\n                                        Personal Information:\n                                    "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-5" }, [
+                        _c("h2", { staticClass: "steps" }, [
+                          _vm._v("Step 2 - 4")
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("First Name: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        name: "fname",
+                        placeholder: "First Name"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Last Name: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        name: "lname",
+                        placeholder: "Last Name"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Contact No.: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        name: "phno",
+                        placeholder: "Contact No."
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Alternate Contact No.: *")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        name: "phno_2",
+                        placeholder: "Alternate Contact No."
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "next action-button",
+                    attrs: { type: "button", name: "next", value: "Next" }
+                  }),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "previous action-button-previous",
+                    attrs: {
+                      type: "button",
+                      name: "previous",
+                      value: "Previous"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("fieldset", [
+                  _c("div", { staticClass: "form-card" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-7" }, [
+                        _c("h2", { staticClass: "fs-title" }, [
+                          _vm._v("Image Upload:")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-5" }, [
+                        _c("h2", { staticClass: "steps" }, [
+                          _vm._v("Step 3 - 4")
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Upload Your Photo:")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: { type: "file", name: "pic", accept: "image/*" }
+                    }),
+                    _vm._v(" "),
+                    _c("label", { staticClass: "fieldlabels" }, [
+                      _vm._v("Upload Signature Photo:")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: { type: "file", name: "pic", accept: "image/*" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "next action-button",
+                    attrs: { type: "button", name: "next", value: "Submit" }
+                  }),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "previous action-button-previous",
+                    attrs: {
+                      type: "button",
+                      name: "previous",
+                      value: "Previous"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("fieldset", [
+                  _c("div", { staticClass: "form-card" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-7" }, [
+                        _c("h2", { staticClass: "fs-title" }, [
+                          _vm._v("Finish:")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-5" }, [
+                        _c("h2", { staticClass: "steps" }, [
+                          _vm._v("Step 4 - 4")
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("br"),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("h2", { staticClass: "purple-text text-center" }, [
+                      _c("strong", [_vm._v("SUCCESS !")])
+                    ]),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row justify-content-center" }, [
+                      _c("div", { staticClass: "col-3" }, [
+                        _c("img", {
+                          staticClass: "fit-image",
+                          attrs: { src: "https://i.imgur.com/GwStPmg.png" }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("br"),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row justify-content-center" }, [
+                      _c("div", { staticClass: "col-7 text-center" }, [
+                        _c("h5", { staticClass: "purple-text text-center" }, [
+                          _vm._v(
+                            "\n                                        You Have Successfully Signed Up\n                                    "
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
             ])
-          ])
-        ])
+          ]
+        )
       ])
     ])
   }
@@ -54354,7 +54961,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CreatePoa_vue_vue_type_template_id_c976e26a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreatePoa.vue?vue&type=template&id=c976e26a& */ "./resources/js/components/CreatePoa.vue?vue&type=template&id=c976e26a&");
 /* harmony import */ var _CreatePoa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreatePoa.vue?vue&type=script&lang=js& */ "./resources/js/components/CreatePoa.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _CreatePoa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreatePoa.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -54362,7 +54971,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _CreatePoa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _CreatePoa_vue_vue_type_template_id_c976e26a___WEBPACK_IMPORTED_MODULE_0__["render"],
   _CreatePoa_vue_vue_type_template_id_c976e26a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -54391,6 +55000,22 @@ component.options.__file = "resources/js/components/CreatePoa.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CreatePoa.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CreatePoa.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./CreatePoa.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CreatePoa.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CreatePoa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
 
 /***/ }),
 
@@ -55117,8 +55742,8 @@ var state = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\Sxgnal2\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\Sxgnal2\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laravel\sxgnal\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laravel\sxgnal\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
